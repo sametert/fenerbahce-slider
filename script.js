@@ -21,10 +21,41 @@ var team = [
   },
 ];
 
-var index = 3;
+var index = 0;
+var slaytCount = team.length;
 
-document.querySelector(".card-img-top").setAttribute("src", team[index].image);
+showSlide(index);
 
-document.querySelector(".card-title").innerHTML = team[index].name;
+document.querySelector(".fa-arrow-left").addEventListener("click", function () {
+  index--;
+  showSlide(index);
+  console.log(index);
+});
 
-document.querySelector(".card-link").setAttribute("href", team[index].link);
+document
+  .querySelector(".fa-arrow-right")
+  .addEventListener("click", function () {
+    index++;
+    showSlide(index);
+    console.log(index);
+  });
+
+function showSlide(i) {
+    index = i;
+
+  if (i < 0) {
+    index = slaytCount - 1;
+  }
+
+  if (i >= slaytCount) {
+    index = 0;
+  }
+
+  document
+    .querySelector(".card-img-top")
+    .setAttribute("src", team[index].image);
+
+  document.querySelector(".card-title").innerHTML = team[index].name;
+
+  document.querySelector(".card-link").setAttribute("href", team[index].link);
+}
