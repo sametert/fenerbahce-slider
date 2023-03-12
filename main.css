@@ -1,3 +1,7 @@
+body {
+    background-color:  #cfd8dc;;
+}
+
 a {
     text-decoration: none;
 }
@@ -9,4 +13,12 @@ i {
 .card-footer {
     display: flex;
     justify-content: space-between;
+}
+
+img {
+    height: 450px;
+}
+
+.card {
+    box-shadow: 5px 10px 18px #888888;
 }
