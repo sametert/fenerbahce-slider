@@ -34,7 +34,7 @@ var settings = {
   random: false,
 };
 
-
+showSlide(index);
 init(settings);
 
 document.querySelector(".fa-arrow-left").addEventListener("click", function () {
