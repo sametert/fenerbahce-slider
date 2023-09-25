@@ -1,20 +1,20 @@
 var team = [
   {
-    name: "Jorge Jesus",
-    image: "img/jorge.jpg",
-    link: "https://www.transfermarkt.com.tr/jorge-jesus/profil/trainer/2145",
+    name: "İsmail Kartal",
+    image: "img/arapismail.jpg",
+    link: "https://www.transfermarkt.com.tr/ismail-kartal/profil/trainer/6366",
     position: "Coach",
   },
   {
-    name: "Arda Güler",
-    image: "img/arda.png",
-    link: "https://www.transfermarkt.com.tr/arda-guler/profil/spieler/861410",
+    name: "Sebastian Szymanski",
+    image: "img/sebastian.jpg",
+    link: "https://www.transfermarkt.pl/sebastian-szymanski/profil/spieler/320748",
     position: "Behind the striker",
   },
   {
-    name: "Enner Valencia",
-    image: "img/valencia.jpg",
-    link: "https://www.transfermarkt.com.tr/enner-valencia/profil/spieler/139503",
+    name: "Edin Dzeko",
+    image: "img/edin-dzeko.jpg",
+    link: "https://www.transfermarkt.com.tr/edin-dzeko/profil/spieler/28396",
     position: "Striker",
   },
   {
@@ -22,15 +22,15 @@ var team = [
     image: "img/ferdi.jpg",
     link: "https://www.transfermarkt.com.tr/ferdi-kadioglu/profil/spieler/369316",
     position: "Right back",
-  },
+  }
 ];
 
 var index = 0;
-var slaytCount = team.length;
+var slideCount = team.length;
 var interval;
 
 var settings = {
-  duration: "2000",
+  duration: "3000",
   random: false,
 };
 
@@ -71,13 +71,13 @@ function init(settings) {
     if (settings.random) {
       //random index
       do {
-        index = Math.floor(Math.random() * slaytCount);
+        index = Math.floor(Math.random() * slideCount);
       } while (index == prev);
       prev = index;
 
     } else {
       //artan index
-      if (slaytCount == index + 1) {
+      if (slideCount == index + 1) {
         index = -1;
       } 
       // showSlide(index);
@@ -95,10 +95,10 @@ function showSlide(i) {
   index = i;
 
   if (i < 0) {
-    index = slaytCount - 1;
+    index = slideCount - 1;
   }
 
-  if (i >= slaytCount) {
+  if (i >= slideCount) {
     index = 0;
   }
 
